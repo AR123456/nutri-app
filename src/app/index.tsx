@@ -1,11 +1,14 @@
-import { Platform } from "react-native";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Platform } from "react-native";
+import * as Device from "expo-device";
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text>My Macro Nutrient App</Text>
       <Text>Running on: {Platform.OS}</Text>
+      <Text>Device Model:{Device.modelName}</Text>
+      <Text>Device Brand:{Device.brand}</Text>
+      <Text>Device OS Version:{Device.osVersion}</Text>
     </View>
   );
 }
