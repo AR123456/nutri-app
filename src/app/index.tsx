@@ -1,9 +1,11 @@
+import { Platform } from "react-native";
 import { Text, View, StyleSheet } from "react-native";
 
-export default function Index() {
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text>My App</Text>
+      <Text>My Macro Nutrient App</Text>
+      <Text>Running on: {Platform.OS}</Text>
     </View>
   );
 }
