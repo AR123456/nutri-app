@@ -1,4 +1,12 @@
 // global styles for the app
 import { StyleSheet } from "react-native";
-export const colors = {};
+export const colors = {
+  background: "#1a1a2e",
+  header: "#242444",
+  surface: "#2a2a4a",
+  primary: "#4fc3f7",
+  text: "#ffffff",
+  textSecondary: "#a0a0b0",
+  alert: "#ff5252",
+};
 export const globalStyles = StyleSheet.create({});
