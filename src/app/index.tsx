@@ -1,14 +1,14 @@
-import { Text, View, StyleSheet, Platform } from "react-native";
+import { Text, View, StyleSheet, Platform, ScrollView } from "react-native";
 // @ points to project root or src folder- configured in tsconfg.json
 import { globalStyles } from "@/styles/global";
 
 export default function HomeScreen() {
   const currentDate = new Date().toLocaleDateString();
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>My Macro Nutrient App</Text>
+    <ScrollView style={globalStyles.container}>
+      <Text style={globalStyles.title}>My Macro Nutrient App</Text>
       <Text style={styles.date}>{currentDate} </Text>
-    </View>
+    </ScrollView>
   );
 }
 
