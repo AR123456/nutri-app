@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet, Platform } from "react-native";
-import * as Device from "expo-device";
+// @ points to project root or src folder- configured in tsconfg.json
+import { globalStyles } from "@/styles/global";
 
 export default function HomeScreen() {
   const currentDate = new Date().toLocaleDateString();
@@ -12,17 +13,6 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#1a1a2e",
-    paddingTop: 60,
-    paddingHorizontal: 20,
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: "bold",
-    color: "#ffffff",
-  },
   date: {
     fontSize: 14,
     color: "#a0a0b0",
