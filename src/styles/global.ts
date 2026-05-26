@@ -13,6 +13,7 @@ export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
+
     paddingTop: 60,
     paddingHorizontal: 20,
   },
