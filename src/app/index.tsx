@@ -1,4 +1,4 @@
-import { Text, StyleSheet, ScrollView } from "react-native";
+import { Text, ScrollView } from "react-native";
 // @ points to project root or src folder- configured in tsconfg.json
 import { globalStyles } from "@/styles/global";
 import HomeHeader from "@/components/HomeHeader";
@@ -11,12 +11,3 @@ export default function HomeScreen() {
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  date: {
-    fontSize: 14,
-    color: "#a0a0b0",
-    marginTop: 4,
-    marginBottom: 30,
-  },
-});

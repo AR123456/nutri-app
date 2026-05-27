@@ -1,6 +1,4 @@
 import { StyleSheet, Text, View } from "react-native";
-import React from "react";
-
 import { colors, globalStyles } from "@/styles/global";
 
 const HomeHeader = () => {
