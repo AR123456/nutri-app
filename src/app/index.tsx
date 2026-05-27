@@ -3,7 +3,6 @@ import { Text, ScrollView } from "react-native";
 import { globalStyles } from "@/styles/global";
 import HomeHeader from "@/components/HomeHeader";
 export default function HomeScreen() {
-  // const currentDate = new Date().toLocaleDateString();
   return (
     <ScrollView style={globalStyles.container}>
       <Text style={globalStyles.title}>My Macro Nutrient App</Text>
