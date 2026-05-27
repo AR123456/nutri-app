@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { globalStyles } from "@/styles/global";
+
+import { colors, globalStyles } from "@/styles/global";
 
 const HomeHeader = () => {
   const currentDate = new Date().toLocaleDateString("en-US", {
@@ -17,4 +18,11 @@ const HomeHeader = () => {
 
 export default HomeHeader;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  date: {
+    fontSize: 14,
+    color: colors.textSecondary,
+    marginTop: 4,
+    marginBottom: 30,
+  },
+});
