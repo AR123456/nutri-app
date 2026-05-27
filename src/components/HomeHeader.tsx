@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { globalStyles } from "@/styles/global";
 
 const HomeHeader = () => {
   const currentDate = new Date().toLocaleDateString("en-US", {
@@ -8,8 +9,8 @@ const HomeHeader = () => {
     day: "numeric",
   });
   return (
-    <View>
-      <Text>{currentDate}</Text>
+    <View style={globalStyles.header}>
+      <Text style={styles.date}>{currentDate}</Text>
     </View>
   );
 };

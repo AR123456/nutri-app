@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Platform, ScrollView } from "react-native";
+import { Text, StyleSheet, ScrollView } from "react-native";
 // @ points to project root or src folder- configured in tsconfg.json
 import { globalStyles } from "@/styles/global";
 import HomeHeader from "@/components/HomeHeader";
