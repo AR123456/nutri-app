@@ -8,7 +8,7 @@ export default function RootLayout() {
         headerTintColor: "#fff",
       }}
     >
-      <Stack.Screen name="index" />
+      <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="meals" />
     </Stack>
   );
