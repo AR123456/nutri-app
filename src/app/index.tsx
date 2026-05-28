@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { Text, ScrollView } from "react-native";
 // @ points to project root or src folder- configured in tsconfg.json
 import { globalStyles } from "@/styles/global";
