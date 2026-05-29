@@ -1,8 +1,7 @@
+import { globalStyles } from "@/styles/global";
 import { Link } from "expo-router";
 import { Text, ScrollView } from "react-native";
-// @ points to project root or src folder- configured in tsconfg.json
-import { globalStyles } from "@/styles/global";
-import HomeHeader from "@/components/HomeHeader";
+import HomeHeader from "../components/HomeHeader";
 export default function HomeScreen() {
   return (
     <ScrollView style={globalStyles.container}>
