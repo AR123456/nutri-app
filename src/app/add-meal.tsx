@@ -3,8 +3,8 @@ import { Text, View } from "react-native";
 
 const AddMealScreen = () => {
   return (
-    <View>
-      <Text style={globalStyles.title}>AddMealScreen</Text>
+    <View style={globalStyles.container}>
+      <Text style={globalStyles.title}>Add Meal</Text>
     </View>
   );
 };
