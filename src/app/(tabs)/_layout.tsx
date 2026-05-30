@@ -1,12 +1,25 @@
 import { View, Text } from "react-native";
 import React from "react";
+import { Tabs } from "expo-router";
 
-const _layout = () => {
+const TabLayout = () => {
   return (
     <View>
-      <Text>_layout</Text>
+      <Tabs>
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: "Home",
+            tabBarIcon: ({ color, size }) => <Ionicons />,
+          }}
+        >
+          TabLayout
+        </Tabs.Screen>
+        <Tabs.Screen>TabLayout</Tabs.Screen>
+        <Tabs.Screen>TabLayout</Tabs.Screen>
+      </Tabs>
     </View>
   );
 };
 
-export default _layout;
+export default TabLayout;
