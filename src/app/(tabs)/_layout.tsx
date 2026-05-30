@@ -30,9 +30,18 @@ const TabLayout = () => {
         <Tabs.Screen
           name="add-meal"
           options={{
-            title: "Home",
+            title: "Add Meal",
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="add-circle" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="meals"
+          options={{
+            title: "All Meals",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="list" size={size} color={color} />
             ),
           }}
         />
