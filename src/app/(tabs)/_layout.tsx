@@ -11,7 +11,7 @@ const TabLayout = () => {
           backgroundColor: colors.background,
           borderTopColor: colors.surface,
         },
-        tabBarActiveTintColor: colors.primary,
+        tabBarActiveTintColor: colors.background,
         tabBarInactiveTintColor: colors.textSecondary,
       }}
     >
