@@ -1,6 +1,11 @@
-import { View, Text } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-
+type MacroCardProps = {
+  label: string;
+  value: string;
+  goal: string;
+  color: string;
+};
 const MacroCard = () => {
   return (
     <View>
@@ -10,3 +15,5 @@ const MacroCard = () => {
 };
 
 export default MacroCard;
+
+const styles = StyleSheet.create({});
