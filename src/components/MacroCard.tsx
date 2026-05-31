@@ -6,7 +6,7 @@ type MacroCardProps = {
   goal: string;
   color: string;
 };
-const MacroCard = () => {
+const MacroCard = ({ label, value, goal, color }: MacroCardProps) => {
   return (
     <View>
       <Text>MacroCard</Text>
