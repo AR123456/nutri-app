@@ -6,6 +6,7 @@ type MacroCardProps = {
   goal: string;
   color: string;
 };
+// confusing name - square for each macro nutrient and cals
 const MacroCard = ({ label, value, goal, color }: MacroCardProps) => {
   return (
     <View style={[styles.card, { borderLeftColor: color }]}>
