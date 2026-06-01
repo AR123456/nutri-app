@@ -18,4 +18,27 @@ const MacroCard = ({ label, value, goal, color }: MacroCardProps) => {
 
 export default MacroCard;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: "#16213e",
+    borderRadius: 12,
+    padding: 16,
+    width: "47%",
+    borderLeftWidth: 4,
+  },
+  label: {
+    fontSize: 14,
+    color: "#a0a0b0",
+  },
+  value: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#ffffff",
+    marginTop: 4,
+  },
+  goal: {
+    fontSize: 14,
+    color: "#a0a0b0",
+    marginTop: 2,
+  },
+});
