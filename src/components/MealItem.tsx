@@ -7,7 +7,7 @@ type MealItemProps = {
   fat: number;
 };
 
-const MealItem = () => {
+const MealItem = ({ name, calories, protein, carbs, fat }: MealItemProps) => {
   return (
     <View>
       <Text>MealItem</Text>
