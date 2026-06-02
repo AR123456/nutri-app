@@ -6,7 +6,7 @@ type MealItemProps = {
   carbs: number;
   fat: number;
 };
-
+// take meal name and its macros , display it
 const MealItem = ({ name, calories, protein, carbs, fat }: MealItemProps) => {
   return (
     <View style={styles.container}>
