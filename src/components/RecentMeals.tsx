@@ -1,5 +1,6 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { StyleSheet, View, Text } from "react-native";
+import { globalStyles } from "@/styles/global";
+import MealItem from "./MealItem";
 
 const RecentMeals = () => {
   return (
