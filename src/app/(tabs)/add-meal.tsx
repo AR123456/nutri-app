@@ -16,6 +16,10 @@ const AddMealScreen = () => {
   const [carbs, setCarbs] = useState("");
   const [fat, setFat] = useState("");
   // on button press call handleAddMeal
+  const handleAddMeal = () => {
+    // state of the getters
+    console.log({ name, calories, protein, carbs, fat });
+  };
   return (
     <View style={globalStyles.container}>
       <Text style={globalStyles.title}>Add Meal</Text>
@@ -24,3 +28,33 @@ const AddMealScreen = () => {
 };
 
 export default AddMealScreen;
+
+const styles = StyleSheet.create({
+  input: {
+    backgroundColor: colors.surface,
+    color: colors.text,
+    padding: 16,
+    borderRadius: 10,
+    fontSize: 16,
+    marginTop: 16,
+  },
+  row: {
+    flexDirection: "row",
+    gap: 10,
+  },
+  rowInput: {
+    flex: 1,
+  },
+  button: {
+    backgroundColor: colors.primary,
+    padding: 16,
+    borderRadius: 10,
+    alignItems: "center",
+    marginTop: 24,
+  },
+  buttonText: {
+    color: colors.background,
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+});
