@@ -10,11 +10,11 @@ import { colors, globalStyles } from "@/styles/global";
 
 const AddMealScreen = () => {
   // state management getters and setters
-  // const [name, setName] = useState("");
-  // const [calories, setCalories] = useState("");
-  // const [protein, setProtein] = useState("");
-  // const [carbs, setCarbs] = useState("");
-  // const [fat, setFat] = useState("");
+  const [name, setName] = useState("");
+  const [calories, setCalories] = useState("");
+  const [protein, setProtein] = useState("");
+  const [carbs, setCarbs] = useState("");
+  const [fat, setFat] = useState("");
   // on button press call handleAddMeal
   return (
     <View style={globalStyles.container}>
