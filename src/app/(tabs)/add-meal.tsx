@@ -35,7 +35,35 @@ const AddMealScreen = () => {
         placeholder="Calories"
         placeholderTextColor={colors.textSecondary}
         value={calories}
-        onChangeText={setName}
+        onChangeText={setCalories}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Protein"
+        placeholderTextColor={colors.textSecondary}
+        value={protein}
+        onChangeText={setProtein}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Carbs"
+        placeholderTextColor={colors.textSecondary}
+        value={carbs}
+        onChangeText={setCarbs}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Carbs"
+        placeholderTextColor={colors.textSecondary}
+        value={carbs}
+        onChangeText={setCarbs}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Fat"
+        placeholderTextColor={colors.textSecondary}
+        value={fat}
+        onChangeText={setFat}
       />
     </View>
   );
