@@ -67,6 +67,9 @@ const AddMealScreen = () => {
           onChangeText={setFat}
         />
       </View>
+      <TouchableOpacity style={styles.button} onPress={handleAddMeal}>
+        <Text style={styles.buttonText}>Add Meal</Text>
+      </TouchableOpacity>
     </View>
   );
 };
