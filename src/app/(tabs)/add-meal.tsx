@@ -8,73 +8,71 @@ import {
 } from "react-native";
 import { colors, globalStyles } from "@/styles/global";
 
-const AddMealScreen = () => {
-  // state management getters and setters
+export default function AddMealScreen() {
   const [name, setName] = useState("");
   const [calories, setCalories] = useState("");
   const [protein, setProtein] = useState("");
   const [carbs, setCarbs] = useState("");
   const [fat, setFat] = useState("");
-  // on button press call handleAddMeal
+
   const handleAddMeal = () => {
-    // state of the getters
     console.log({ name, calories, protein, carbs, fat });
   };
+
   return (
     <View style={globalStyles.container}>
       <Text style={globalStyles.title}>Add Meal</Text>
+
+      <TextInput
+        style={styles.input}
+        placeholder="Meal name"
+        placeholderTextColor={colors.textSecondary}
+        value={name}
+        onChangeText={setName}
+      />
+
+      <TextInput
+        style={styles.input}
+        placeholder="Calories"
+        placeholderTextColor={colors.textSecondary}
+        keyboardType="numeric"
+        value={calories}
+        onChangeText={setCalories}
+      />
+
       <View style={styles.row}>
         <TextInput
-          style={styles.input}
-          placeholder="Meal name"
+          style={[styles.input, styles.rowInput]}
+          placeholder="Protein (g)"
           placeholderTextColor={colors.textSecondary}
-          value={name}
-          onChangeText={setName}
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Calories"
-          placeholderTextColor={colors.textSecondary}
-          value={calories}
-          onChangeText={setCalories}
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Protein"
-          placeholderTextColor={colors.textSecondary}
+          keyboardType="numeric"
           value={protein}
           onChangeText={setProtein}
         />
         <TextInput
-          style={styles.input}
-          placeholder="Carbs"
+          style={[styles.input, styles.rowInput]}
+          placeholder="Carbs (g)"
           placeholderTextColor={colors.textSecondary}
+          keyboardType="numeric"
           value={carbs}
           onChangeText={setCarbs}
         />
         <TextInput
-          style={styles.input}
-          placeholder="Carbs"
+          style={[styles.input, styles.rowInput]}
+          placeholder="Fat (g)"
           placeholderTextColor={colors.textSecondary}
-          value={carbs}
-          onChangeText={setCarbs}
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Fat"
-          placeholderTextColor={colors.textSecondary}
+          keyboardType="numeric"
           value={fat}
           onChangeText={setFat}
         />
       </View>
+
       <TouchableOpacity style={styles.button} onPress={handleAddMeal}>
         <Text style={styles.buttonText}>Add Meal</Text>
       </TouchableOpacity>
     </View>
   );
-};
-
-export default AddMealScreen;
+}
 
 const styles = StyleSheet.create({
   input: {
