@@ -23,6 +23,20 @@ const AddMealScreen = () => {
   return (
     <View style={globalStyles.container}>
       <Text style={globalStyles.title}>Add Meal</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Meal name"
+        placeholderTextColor={colors.textSecondary}
+        value={name}
+        onChangeText={setName}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Calories"
+        placeholderTextColor={colors.textSecondary}
+        value={calories}
+        onChangeText={setName}
+      />
     </View>
   );
 };
