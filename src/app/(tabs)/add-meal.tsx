@@ -1,4 +1,8 @@
 import { useState } from "react";
+// need router and the meals handler
+import { addMeal } from "@/storage/meals";
+
+import { router } from "expo-router";
 import {
   StyleSheet,
   Text,
