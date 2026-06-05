@@ -9,3 +9,10 @@ export type Meal = {
   fat: number;
   createdAt: string;
 };
+// asyncstorage will store meals in array with meals key
+const MEALS_KEY = "meals";
+// get meals
+export const getMeals = async (): Promise<Meal[]> => {
+  const data = await AsyncStorage.getItem(MEALS_KEY);
+  return data ? JSON.parse(data) : [];
+};
