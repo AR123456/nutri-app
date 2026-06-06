@@ -8,6 +8,12 @@ import { useCallback, useState } from "react";
 import { ScrollView, Text } from "react-native";
 export default function HomeScreen() {
   const [meals, setMeals] = useState<Meal[]>([]);
+  // use getMeals meal handler to get meals from local storage
+  const loadMeals = async () => {
+    const data = await getMeals();
+    setMeals(data);
+    console.log("Loaded meals", data);
+  };
   return (
     <ScrollView style={globalStyles.container}>
       <Text style={globalStyles.title}>My Macro Nutrient App</Text>
