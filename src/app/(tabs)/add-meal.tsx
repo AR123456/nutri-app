@@ -1,6 +1,6 @@
 import { useState } from "react";
 // need router and the meals handler
-import { addMeal } from "@/storage/meals";
+import { addMeal, getMeals } from "@/storage/meals";
 import { router } from "expo-router";
 import {
   Alert,
@@ -27,12 +27,15 @@ export default function AddMealScreen() {
 
     await addMeal({
       name,
+      // get user input cast as number
       calories: Number(calories),
       protein: Number(protein) || 0,
       carbs: Number(carbs) || 0,
       fat: Number(fat) || 0,
     });
-
+    const stored = await getMeals();
+    console.log("Storage after add:", stored);
+    // clear from state after adding to storage
     setName("");
     setCalories("");
     setProtein("");
@@ -40,7 +43,7 @@ export default function AddMealScreen() {
     setFat("");
 
     Alert.alert("Success", "Meal added successfully!");
-
+    // redirect to home
     router.push("/");
   };
 
