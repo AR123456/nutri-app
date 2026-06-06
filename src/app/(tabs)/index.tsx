@@ -7,6 +7,7 @@ import { useFocusEffect } from "expo-router";
 import { useCallback, useState } from "react";
 import { ScrollView, Text } from "react-native";
 export default function HomeScreen() {
+  const [meals, setMeals] = useState<Meal[]>([]);
   return (
     <ScrollView style={globalStyles.container}>
       <Text style={globalStyles.title}>My Macro Nutrient App</Text>
