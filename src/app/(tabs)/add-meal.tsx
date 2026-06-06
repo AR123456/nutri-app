@@ -33,8 +33,9 @@ export default function AddMealScreen() {
       carbs: Number(carbs) || 0,
       fat: Number(fat) || 0,
     });
-    const stored = await getMeals();
-    console.log("Storage after add:", stored);
+    // cons log for test
+    // const stored = await getMeals();
+    // console.log("Storage after add:", stored);
     // clear from state after adding to storage
     setName("");
     setCalories("");
