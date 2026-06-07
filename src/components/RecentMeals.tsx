@@ -1,5 +1,6 @@
-import { StyleSheet, View, Text } from "react-native";
+import { Meal } from "@/storage/meals";
 import { globalStyles } from "@/styles/global";
+import { Text, View } from "react-native";
 import MealItem from "./MealItem";
 
 const RecentMeals = () => {
