@@ -14,6 +14,12 @@ export default function HomeScreen() {
     setMeals(data);
     console.log("Loaded meals", data);
   };
+  //load the meals whenever the home screen comes into focus
+  useFocusEffect(
+    useCallback(() => {
+      loadMeals();
+    }, []),
+  );
   return (
     <ScrollView style={globalStyles.container}>
       <Text style={globalStyles.title}>My Macro Nutrient App</Text>
