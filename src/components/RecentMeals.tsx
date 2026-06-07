@@ -9,7 +9,10 @@ const RecentMeals = ({ meals }: RecentMealsProps) => {
   return (
     <View style={{ marginTop: 30 }}>
       <Text style={globalStyles.sectionTitle}>Recent Meals</Text>
-      <MealItem
+      if (meals.length===0){" "}
+      {<Text style={globalStyles.empty}>No meals logged yet.</Text>}else
+      {<MealItem name={meals.name} />}
+      {/* <MealItem
         name="Chicken & Rice"
         calories={540}
         protein={45}
@@ -29,7 +32,7 @@ const RecentMeals = ({ meals }: RecentMealsProps) => {
         protein={35}
         carbs={10}
         fat={25}
-      />
+      /> */}
     </View>
   );
 };
