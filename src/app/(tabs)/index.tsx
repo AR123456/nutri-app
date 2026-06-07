@@ -7,6 +7,7 @@ import { useFocusEffect } from "expo-router";
 import { useCallback, useState } from "react";
 import { ScrollView, Text } from "react-native";
 export default function HomeScreen() {
+  // set meals state to empty array
   const [meals, setMeals] = useState<Meal[]>([]);
   // use getMeals meal handler to get meals from local storage
   const loadMeals = async () => {
@@ -25,7 +26,7 @@ export default function HomeScreen() {
       <Text style={globalStyles.title}>My Macro Nutrient App</Text>
       <HomeHeader />
       <MacroGrid />
-      <RecentMeals />
+      <RecentMeals meals={meals} />
     </ScrollView>
   );
 }
