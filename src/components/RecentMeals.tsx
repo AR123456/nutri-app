@@ -4,6 +4,9 @@ import { Text, View } from "react-native";
 import MealItem from "./MealItem";
 
 const RecentMeals = () => {
+  type RecentMealsProps = {
+    meals: Meal[];
+  };
   return (
     <View style={{ marginTop: 30 }}>
       <Text style={globalStyles.sectionTitle}>Recent Meals</Text>
