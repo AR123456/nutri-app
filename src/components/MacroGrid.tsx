@@ -7,7 +7,17 @@ type MacroGridProps = {
 };
 // confusing name this is a card like container for the meal all the macro nutrients shown in a card like component
 
-const MacroGrid = () => {
+const MacroGrid = ({ meals }: MacroGridProps) => {
+  // add up macronutrients - array reduce method
+  // array.reduce((accumulator, currentValue, currentIndex, array) => {
+  // Return the updated accumulator
+  // }, initialValue);
+  const totals = meals.reduce((acc, meal) => ({}), {
+    calories: 0,
+    protein: 0,
+    carbs: 0,
+    fat: 0,
+  });
   return (
     <View style={styles.grid}>
       <MacroCard label="Calories" value="0" goal="2,000" color="#ff6b6b" />
