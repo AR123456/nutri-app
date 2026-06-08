@@ -12,12 +12,20 @@ const MacroGrid = ({ meals }: MacroGridProps) => {
   // array.reduce((accumulator, currentValue, currentIndex, array) => {
   // Return the updated accumulator
   // }, initialValue);
-  const totals = meals.reduce((acc, meal) => ({}), {
-    calories: 0,
-    protein: 0,
-    carbs: 0,
-    fat: 0,
-  });
+  const totals = meals.reduce(
+    (acc, meal) => ({
+      calories: acc.calories + meal.calories,
+      protein: acc.protein + meal.protein,
+      carbs: acc.carbs + meal.carbs,
+      fat: acc.fat + meal.fat,
+    }),
+    {
+      calories: 0,
+      protein: 0,
+      carbs: 0,
+      fat: 0,
+    },
+  );
   return (
     <View style={styles.grid}>
       <MacroCard label="Calories" value="0" goal="2,000" color="#ff6b6b" />
