@@ -1,5 +1,10 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { Meal } from "@/storage/meals";
 import MacroCard from "./MacroCard";
+
+type MacroGridProps = {
+  meals: Meal[];
+};
 // confusing name this is a card like container for the meal all the macro nutrients shown in a card like component
 
 const MacroGrid = () => {
