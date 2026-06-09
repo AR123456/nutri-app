@@ -34,7 +34,6 @@ export const addMeal = async (
   //Returns the completed meal object so the caller can use it
   return newMeal;
 };
-export const delMeal=async(){
-  const meals=await getMeals()
-
-}
+export const delMeal = async (id: string): Promise<void> => {
+  const meals = await getMeals();
+};
