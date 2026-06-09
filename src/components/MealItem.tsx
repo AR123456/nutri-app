@@ -8,6 +8,7 @@ type MealItemProps = {
   protein: number;
   carbs: number;
   fat: number;
+  onDelete: () => void;
 };
 // take meal name and its macros , display it
 const MealItem = ({ name, calories, protein, carbs, fat }: MealItemProps) => {
