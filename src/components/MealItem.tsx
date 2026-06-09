@@ -1,4 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Alert, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { deleteMeal } from "@/storage/meals";
+import { colors } from "@/styles/global";
+
 type MealItemProps = {
   name: string;
   calories: number;
