@@ -3,6 +3,7 @@ import { deleteMeal } from "@/storage/meals";
 import { colors } from "@/styles/global";
 
 type MealItemProps = {
+  id: string;
   name: string;
   calories: number;
   protein: number;
@@ -12,6 +13,7 @@ type MealItemProps = {
 };
 // take meal name and its macros , display it
 const MealItem = ({
+  id,
   name,
   calories,
   protein,
