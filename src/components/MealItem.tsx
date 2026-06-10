@@ -34,12 +34,12 @@ const MealItem = ({
   };
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container}>
       <Text style={styles.name}>{name}</Text>
       <Text style={styles.macros}>
         {calories} cal • {protein}g P • {carbs}g C • {fat}g F
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
