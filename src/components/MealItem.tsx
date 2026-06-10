@@ -34,7 +34,7 @@ const MealItem = ({
   };
 
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onLongPress={handleLongPress}>
       <Text style={styles.name}>{name}</Text>
       <Text style={styles.macros}>
         {calories} cal • {protein}g P • {carbs}g C • {fat}g F
