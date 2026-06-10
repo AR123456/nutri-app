@@ -11,7 +11,14 @@ type MealItemProps = {
   onDelete: () => void;
 };
 // take meal name and its macros , display it
-const MealItem = ({ name, calories, protein, carbs, fat }: MealItemProps) => {
+const MealItem = ({
+  name,
+  calories,
+  protein,
+  carbs,
+  fat,
+  onDelete,
+}: MealItemProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.name}>{name}</Text>
