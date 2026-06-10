@@ -21,10 +21,10 @@ const MealItem = ({
 }: MealItemProps) => {
   const handleLongPress = () => {
     Alert.alert("Delete Meal", `Are you sure you want to delete "${name}"?`, [
-      { text: "Cancel", style: "cancle" },
+      { text: "Cancel", style: "cancel" },
       {
         text: "Delete",
-        style: "destrictive",
+        style: "destructive",
         onPress: async () => {
           await deleteMeal(id);
           onDelete();
@@ -32,6 +32,7 @@ const MealItem = ({
       },
     ]);
   };
+
   return (
     <View style={styles.container}>
       <Text style={styles.name}>{name}</Text>
