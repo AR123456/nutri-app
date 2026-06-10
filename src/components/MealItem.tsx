@@ -19,6 +19,19 @@ const MealItem = ({
   fat,
   onDelete,
 }: MealItemProps) => {
+  const handleLongPress = () => {
+    Alert.alert("Delete Meal", `Are you sure you want to delete "${name}"?`, [
+      { text: "Cancel", style: "cancle" },
+      {
+        text: "Delete",
+        style: "destrictive",
+        onPress: async () => {
+          await deleteMeal(id);
+          onDelete();
+        },
+      },
+    ]);
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.name}>{name}</Text>
