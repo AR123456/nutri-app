@@ -1,6 +1,9 @@
+import MealItem from "@/components/MealItem";
+import { getMeals, Meal } from "@/storage/meals";
 import { globalStyles } from "@/styles/global";
-import { Link } from "expo-router";
-import { Text, ScrollView } from "react-native";
+import { useFocusEffect } from "expo-router";
+import { useCallback, useState } from "react";
+import { ScrollView, Text, View } from "react-native";
 
 const MealsScreen = () => {
   <ScrollView style={globalStyles.container}>
