@@ -34,8 +34,7 @@ export const addMeal = async (
   //Returns the completed meal object so the caller can use it
   return newMeal;
 };
-export const delMeal = async (id: string): Promise<void> => {
-  // This function takes in the ID of the meal to delete, retrieves the current meals from storage, filters out the meal with the matching ID, and then saves the updated list back to storage.
+export const deleteMeal = async (id: string): Promise<void> => {
   const meals = await getMeals();
   const filtered = meals.filter((meal) => meal.id !== id);
   await AsyncStorage.setItem(MEALS_KEY, JSON.stringify(filtered));
