@@ -26,7 +26,7 @@ export default function HomeScreen() {
       <Text style={globalStyles.title}>My Macro Nutrient App</Text>
       <HomeHeader />
       <MacroGrid meals={meals} />
-      <RecentMeals meals={meals} />
+      <RecentMeals meals={meals} onDelete={loadMeals} />
     </ScrollView>
   );
 }
