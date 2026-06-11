@@ -1,6 +1,6 @@
 import { Meal } from "@/storage/meals";
 import { globalStyles } from "@/styles/global";
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import MealItem from "./MealItem";
 type RecentMealsProps = {
   meals: Meal[];
@@ -35,3 +35,15 @@ const RecentMeals = ({ meals, onDelete }: RecentMealsProps) => {
 };
 
 export default RecentMeals;
+const styles = StyleSheet.create({
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: "#ffffff",
+    marginBottom: 16,
+  },
+  empty: {
+    color: "#a0a0b0",
+    fontSize: 14,
+  },
+});
