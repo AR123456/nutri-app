@@ -4,6 +4,7 @@ import { Text, View } from "react-native";
 import MealItem from "./MealItem";
 type RecentMealsProps = {
   meals: Meal[];
+  onDelete: () => void;
 };
 const RecentMeals = ({ meals }: RecentMealsProps) => {
   return (
