@@ -6,7 +6,7 @@ type RecentMealsProps = {
   meals: Meal[];
   onDelete: () => void;
 };
-const RecentMeals = ({ meals }: RecentMealsProps) => {
+const RecentMeals = ({ meals, onDelete }: RecentMealsProps) => {
   return (
     <View style={{ marginTop: 30 }}>
       <Text style={globalStyles.sectionTitle}>Recent Meals</Text>
@@ -20,11 +20,13 @@ const RecentMeals = ({ meals }: RecentMealsProps) => {
             <MealItem
               // need key to show list
               key={meal.id}
+              id={meal.id}
               name={meal.name}
               calories={meal.calories}
               protein={meal.protein}
               carbs={meal.carbs}
               fat={meal.fat}
+              onDelete={onDelete}
             />
           ))
       )}
