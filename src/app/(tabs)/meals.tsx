@@ -7,6 +7,10 @@ import { ScrollView, Text, View } from "react-native";
 
 const MealsScreen = () => {
   const [meals, setMeals] = useState<Meal[]>([]);
+  const loadMeals = async () => {
+    const data = await getMeals();
+    setMeals(data);
+  };
 
   <ScrollView style={globalStyles.container}>
     <Text style={globalStyles.title}>All Meals</Text>
