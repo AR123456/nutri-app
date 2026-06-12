@@ -11,7 +11,11 @@ const MealsScreen = () => {
     const data = await getMeals();
     setMeals(data);
   };
-
+  useFocusEffect(
+    useCallback(() => {
+      loadMeals();
+    }, []),
+  );
   <ScrollView style={globalStyles.container}>
     <Text style={globalStyles.title}>All Meals</Text>
     <Link href="/add-meal" style={{ fontSize: 18, color: "#007bff" }}>
