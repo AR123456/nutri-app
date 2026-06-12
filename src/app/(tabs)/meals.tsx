@@ -37,9 +37,6 @@ const MealsScreen = () => {
           ))
         )}
       </View>
-      <Link href="/add-meal" style={{ fontSize: 18, color: "#007bff" }}>
-        Add New Meal
-      </Link>
     </ScrollView>
   );
 };
