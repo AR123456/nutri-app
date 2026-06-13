@@ -24,7 +24,12 @@ const MealsScreen = () => {
   );
   return (
     <ScrollView style={globalStyles.container}>
-      <Text style={globalStyles.title}>All Meals</Text>
+      <View style={globalStyles.header}>
+        <Text style={globalStyles.title}>All Meals</Text>
+        <TouchableOpacity>
+          <Text>Clear All</Text>
+        </TouchableOpacity>
+      </View>
       <View style={{ marginTop: 30 }}>
         {meals.length === 0 ? (
           <Text style={globalStyles.empty}>No meals logged yet</Text>
