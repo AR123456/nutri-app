@@ -11,7 +11,7 @@ const MealsScreen = () => {
     const data = await getMeals();
     setMeals(data);
   };
-  // clear local storage
+
   const handleClearAll = async () => {
     await clearAllMeals();
     loadMeals();
