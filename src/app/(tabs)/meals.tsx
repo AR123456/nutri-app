@@ -26,8 +26,8 @@ const MealsScreen = () => {
     <ScrollView style={globalStyles.container}>
       <View style={globalStyles.header}>
         <Text style={globalStyles.title}>All Meals</Text>
-        <TouchableOpacity>
-          <Text>Clear All</Text>
+        <TouchableOpacity onPress={handleClearAll}>
+          <Text style={styles.clearButton}>Clear All</Text>
         </TouchableOpacity>
       </View>
       <View style={{ marginTop: 30 }}>
@@ -53,3 +53,9 @@ const MealsScreen = () => {
 };
 
 export default MealsScreen;
+const styles = {
+  clearButton: {
+    color: "red",
+    fontSize: 16,
+  },
+};
