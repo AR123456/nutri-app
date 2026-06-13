@@ -1,9 +1,9 @@
 import MealItem from "@/components/MealItem";
-import { getMeals, Meal } from "@/storage/meals";
+import { clearAllMeals, getMeals, Meal } from "@/storage/meals";
 import { globalStyles } from "@/styles/global";
-import { useFocusEffect, Link } from "expo-router";
+import { useFocusEffect } from "expo-router";
 import { useCallback, useState } from "react";
-import { ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, View, TouchableOpacity } from "react-native";
 
 const MealsScreen = () => {
   const [meals, setMeals] = useState<Meal[]>([]);
