@@ -30,6 +30,14 @@ const MealItem = ({
         style: "destructive",
         onPress: async () => {
           await deleteMeal(id);
+          // Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+          const triggerHaptic = async () => {
+            console.log("Haptic feedback triggered: Success");
+            await Haptics.notificationAsync(
+              Haptics.NotificationFeedbackType.Success,
+            );
+          };
+          triggerHaptic();
           onDelete();
         },
       },
