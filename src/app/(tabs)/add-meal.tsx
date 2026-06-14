@@ -43,7 +43,12 @@ export default function AddMealScreen() {
     setProtein("");
     setCarbs("");
     setFat("");
-
+    // Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    const triggerHaptic = async () => {
+      console.log("Haptic feedback triggered: Success");
+      await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    };
+    triggerHaptic();
     Alert.alert("Success", "Meal added successfully!");
     // redirect to home
     router.push("/");
