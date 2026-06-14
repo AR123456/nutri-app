@@ -1,4 +1,5 @@
 import { useState } from "react";
+import * as Haptics from "expo-haptics";
 // need router and the meals handler
 import { addMeal, getMeals } from "@/storage/meals";
 import { router } from "expo-router";
