@@ -1,6 +1,8 @@
 // Share API , use this button anywhere in app
-import { View, Text } from "react-native";
-import React from "react";
+import { Share, TouchableOpacity } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { Meal } from "@/storage/meals";
+import { colors } from "@/styles/global";
 
 const ShareButton = () => {
   return (
