@@ -7,7 +7,10 @@ import { colors } from "@/styles/global";
 type ShareButtonProps = {
   meals: Meal[];
 };
-const ShareButton = () => {
+const ShareButton = ({ meals }: ShareButtonProps) => {
+  const handleShare = async () => {
+    //
+  };
   return (
     <View>
       <Text>ShareButton</Text>
