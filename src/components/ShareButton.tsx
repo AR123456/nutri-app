@@ -4,6 +4,9 @@ import { Ionicons } from "@expo/vector-icons";
 import { Meal } from "@/storage/meals";
 import { colors } from "@/styles/global";
 
+type ShareButtonProps = {
+  meals: Meal[];
+};
 const ShareButton = () => {
   return (
     <View>
