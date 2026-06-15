@@ -12,9 +12,9 @@ const ShareButton = ({ meals }: ShareButtonProps) => {
     //
   };
   return (
-    <View>
-      <Text>ShareButton</Text>
-    </View>
+    <TouchableOpacity>
+      <Ionicons />
+    </TouchableOpacity>
   );
 };
 
