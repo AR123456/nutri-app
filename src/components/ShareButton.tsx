@@ -9,7 +9,15 @@ type ShareButtonProps = {
 };
 const ShareButton = ({ meals }: ShareButtonProps) => {
   const handleShare = async () => {
-    const totals = meals.reduce();
+    const totals = meals.reduce(
+      (acc, meal) => ({
+        //
+      }),
+      { calories: 0, protein: 0, carbs: 0, fat: 0 },
+    );
+    await Share.share({
+      message: `Nutri-app Daily Summary\n\nCalories: ${totals.calories}\nProtine: ${totals.protein}g\nCarbs: ${totals.carbs}g\nFat: ${totals.fat}g\nMeals: ${meals.length} logged today`,
+    });
   };
   return (
     <TouchableOpacity>
