@@ -23,8 +23,8 @@ const ShareButton = ({ meals }: ShareButtonProps) => {
     });
   };
   return (
-    <TouchableOpacity>
-      <Ionicons />
+    <TouchableOpacity onPress={handleShare}>
+      <Ionicons name="share-outline" size={24} color={colors.primary} />
     </TouchableOpacity>
   );
 };
