@@ -5,7 +5,7 @@ import { getMeals, Meal } from "@/storage/meals";
 import { globalStyles } from "@/styles/global";
 import { useFocusEffect } from "expo-router";
 import { useCallback, useState } from "react";
-import { ScrollView, Text } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import ShareButton from "@/components/ShareButton";
 export default function HomeScreen() {
   // set meals state to empty array
@@ -24,7 +24,10 @@ export default function HomeScreen() {
   );
   return (
     <ScrollView style={globalStyles.container}>
-      <Text style={globalStyles.title}>My Macro Nutrient App</Text>
+      <View style={globalStyles.header}>
+        <Text style={globalStyles.title}>My Macro Nutrient App</Text>
+        <ShareButton meals={meals} />
+      </View>
       <HomeHeader />
       <MacroGrid meals={meals} />
       <RecentMeals meals={meals} onDelete={loadMeals} />
