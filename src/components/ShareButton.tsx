@@ -11,12 +11,15 @@ const ShareButton = ({ meals }: ShareButtonProps) => {
   const handleShare = async () => {
     const totals = meals.reduce(
       (acc, meal) => ({
-        //
+        calories: acc.calories + meal.calories,
+        protein: acc.protein + meal.protein,
+        carbs: acc.carbs + meal.carbs,
+        fat: acc.fat + meal.fat,
       }),
       { calories: 0, protein: 0, carbs: 0, fat: 0 },
     );
     await Share.share({
-      message: `Nutri-app Daily Summary\n\nCalories: ${totals.calories}\nProtine: ${totals.protein}g\nCarbs: ${totals.carbs}g\nFat: ${totals.fat}g\nMeals: ${meals.length} logged today`,
+      message: `Nutri-app Daily Summary\n\nCalories: ${totals.calories}\nProtein: ${totals.protein}g\nCarbs: ${totals.carbs}g\nFat: ${totals.fat}g\nMeals: ${meals.length} logged today`,
     });
   };
   return (
