@@ -9,7 +9,7 @@ type ShareButtonProps = {
 };
 const ShareButton = ({ meals }: ShareButtonProps) => {
   const handleShare = async () => {
-    //
+    const totals = meals.reduce();
   };
   return (
     <TouchableOpacity>
