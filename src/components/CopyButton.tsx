@@ -10,7 +10,7 @@ type CopyButtonProps = {
   meals: Meal[];
 };
 
-const CopyButton = () => {
+const CopyButton = ({ meals }: CopyButtonProps) => {
   return (
     <View>
       <Text>CopyButton</Text>
