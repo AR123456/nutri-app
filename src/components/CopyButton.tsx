@@ -12,7 +12,17 @@ type CopyButtonProps = {
 
 const CopyButton = ({ meals }: CopyButtonProps) => {
   // handle copy
-  const handleCopy = async () => {};
+  const handleCopy = async () => {
+    const totals = meals.reduce(
+      (acc, meal) => ({
+        calories: acc.calories + meal.calories,
+        protein: acc.protein + meal.protein,
+        carbs: acc.carbs + meal.carbs,
+        fat: acc.fat + meal.fat,
+      }),
+      { calories: 0, protein: 0, carbs: 0, fat: 0 },
+    );
+  };
   // summary to return
   const summary = ``;
   return (
