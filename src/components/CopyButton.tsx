@@ -23,3 +23,15 @@ const CopyButton = ({ meals }: CopyButtonProps) => {
 };
 
 export default CopyButton;
+const styles = StyleSheet.create({
+  button: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    marginTop: 16,
+  },
+  text: {
+    color: colors.primary,
+    fontSize: 14,
+  },
+});
