@@ -11,6 +11,10 @@ type CopyButtonProps = {
 };
 
 const CopyButton = ({ meals }: CopyButtonProps) => {
+  // handle copy
+  const handleCopy = async () => {};
+  // summary to return
+  const summary = ``;
   return (
     <View>
       <Text>CopyButton</Text>
