@@ -22,9 +22,10 @@ const CopyButton = ({ meals }: CopyButtonProps) => {
       }),
       { calories: 0, protein: 0, carbs: 0, fat: 0 },
     );
+    // summary to return
+    const summary = `MacroZone Daily Summary\n\nCalories: ${totals.calories}\nProtein: ${totals.protein}g\nCarbs: ${totals.carbs}g\nFat: ${totals.fat}g\n\nMeals: ${meals.length} logged today`;
   };
-  // summary to return
-  const summary = ``;
+
   return (
     <View>
       <Text>CopyButton</Text>
