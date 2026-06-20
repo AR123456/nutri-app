@@ -30,9 +30,9 @@ const CopyButton = ({ meals }: CopyButtonProps) => {
   };
 
   return (
-    <View>
+    <TouchableOpacity style={styles.button} onPress={handleCopy}>
       <Text>CopyButton</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
