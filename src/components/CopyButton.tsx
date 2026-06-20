@@ -25,6 +25,8 @@ const CopyButton = ({ meals }: CopyButtonProps) => {
     // summary to return
     const summary = `MacroZone Daily Summary\n\nCalories: ${totals.calories}\nProtein: ${totals.protein}g\nCarbs: ${totals.carbs}g\nFat: ${totals.fat}g\n\nMeals: ${meals.length} logged today`;
     await Clipboard.setStringAsync(summary);
+    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    Alert.alert("Copied!", "Macro summary copied to clipoard.");
   };
 
   return (
