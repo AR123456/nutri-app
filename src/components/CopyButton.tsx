@@ -31,7 +31,8 @@ const CopyButton = ({ meals }: CopyButtonProps) => {
 
   return (
     <TouchableOpacity style={styles.button} onPress={handleCopy}>
-      <Text>CopyButton</Text>
+      <Ionicons name="copy-outline" size={18} color={colors.primary} />
+      <Text style={styles.text}>Copy Summary</Text>
     </TouchableOpacity>
   );
 };
