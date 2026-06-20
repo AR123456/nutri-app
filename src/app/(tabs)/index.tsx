@@ -7,6 +7,7 @@ import { useFocusEffect } from "expo-router";
 import { useCallback, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
 import ShareButton from "@/components/ShareButton";
+import CopyButton from "@/components/CopyButton";
 export default function HomeScreen() {
   // set meals state to empty array
   const [meals, setMeals] = useState<Meal[]>([]);
