@@ -10,7 +10,10 @@ Notifications.setNotificationHandler({
   }),
 });
 // request permissions
-
+export const requestPermissions = async (): Promise<boolean> => {
+  const { status } = await Notifications.requestPermissionsAsync();
+  return status === "granted";
+};
 // schedule mel reminders
 
 // cancel meal reminders
