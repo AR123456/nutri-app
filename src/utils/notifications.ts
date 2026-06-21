@@ -15,5 +15,11 @@ export const requestPermissions = async (): Promise<boolean> => {
   return status === "granted";
 };
 // schedule mel reminders
+export const scheduleMealReminders = async () => {
+  // await notifications canc
+  await Notifications.cancelAllScheduledNotificationsAsync();
+  // await notifications call
+  // await notifcations schedule
+};
 
 // cancel meal reminders
