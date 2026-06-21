@@ -5,8 +5,8 @@ Notifications.setNotificationHandler({
     shouldShowAlert: true,
     shouldShowBanner: true,
     shouldShowList: true,
-    shouldShowSound: false,
-    shouldShowBadge: false,
+    shouldPlaySound: false,
+    shouldSetBadge: false,
   }),
 });
 // request permissions
