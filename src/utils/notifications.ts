@@ -16,9 +16,8 @@ export const requestPermissions = async (): Promise<boolean> => {
 };
 // schedule mel reminders
 export const scheduleMealReminders = async () => {
-  // await notifications canc
   await Notifications.cancelAllScheduledNotificationsAsync();
-  // await notifications call
+
   await Notifications.scheduleNotificationAsync({
     content: {
       title: "MacroZone",
@@ -27,6 +26,17 @@ export const scheduleMealReminders = async () => {
     trigger: {
       type: Notifications.SchedulableTriggerInputTypes.DAILY,
       hour: 12,
+      minute: 0,
+    },
+  });
+  await Notifications.scheduleNotificationAsync({
+    content: {
+      title: "MacroZone",
+      body: "Don't forget to log your dinner!",
+    },
+    trigger: {
+      type: Notifications.SchedulableTriggerInputTypes.DAILY,
+      hour: 18,
       minute: 0,
     },
   });
