@@ -40,7 +40,8 @@ export const scheduleMealReminders = async () => {
       minute: 0,
     },
   });
-  // await notifcations schedule
 };
 
-// cancel meal reminders
+export const cancelMealReminders = async () => {
+  await Notifications.cancelAllScheduledNotificationsAsync();
+};
