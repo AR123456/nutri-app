@@ -10,7 +10,14 @@ import {
 const REMINDERS_KEY = "remindersEnabled";
 
 const ReminderToggle = () => {
-  const [] = useState(false);
+  const [enabled, setEnabled] = useState(false);
+  useEffect(() => {
+    const load = async () => {
+      const val = await AsyncStorage.getItem(REMINDERS_KEY);
+      setEnabled(val === "true");
+    };
+    load();
+  }, []);
   return (
     <View>
       <Text>ReminderToggle</Text>
