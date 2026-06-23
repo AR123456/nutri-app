@@ -7,9 +7,10 @@ import {
   requestPermissions,
   scheduleMealReminders,
 } from "@/utils/notifications";
+const REMINDERS_KEY = "remindersEnabled";
 
 const ReminderToggle = () => {
-  // getter setter
+  const [] = useState(false);
   return (
     <View>
       <Text>ReminderToggle</Text>
