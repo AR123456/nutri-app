@@ -18,6 +18,19 @@ const ReminderToggle = () => {
     };
     load();
   }, []);
+  const toggle = async (value: boolean) => {
+    if (value) {
+      const granted = await requestPermissions();
+      if (!granted) {
+        return;
+        await scheduleMealReminders();
+      } else {
+        await cancelMealReminders();
+      }
+      setEnabled(value);
+      await AysncStorage.setItem(REMINDERS_KEY, value.toString());
+    }
+  };
   return (
     <View>
       <Text>ReminderToggle</Text>
