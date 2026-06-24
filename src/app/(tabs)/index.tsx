@@ -8,6 +8,7 @@ import { useCallback, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
 import ShareButton from "@/components/ShareButton";
 import CopyButton from "@/components/CopyButton";
+import ReminderToggle from "@/components/ReminderToggle";
 export default function HomeScreen() {
   // set meals state to empty array
   const [meals, setMeals] = useState<Meal[]>([]);
