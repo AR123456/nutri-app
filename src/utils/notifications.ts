@@ -13,18 +13,12 @@ Notifications.setNotificationHandler({
 // request permissions
 export const requestPermissions = async (): Promise<boolean> => {
   const { status } = await Notifications.requestPermissionsAsync();
-  // test
-  console.log("Notification permission status:", status);
 
   return status === "granted";
 };
 // schedule mel reminders
 export const scheduleMealReminders = async () => {
-  // test
-  console.log("scheduleMealReminders called");
   await Notifications.cancelAllScheduledNotificationsAsync();
-  // test
-  console.log("Existing notifications cleared");
 
   await Notifications.scheduleNotificationAsync({
     content: {
@@ -50,10 +44,8 @@ export const scheduleMealReminders = async () => {
       minute: 0,
     },
   });
-  console.log("Dinner reminder scheduled");
 };
 
 export const cancelMealReminders = async () => {
   await Notifications.cancelAllScheduledNotificationsAsync();
-  console.log("All meal reminders cancelled");
 };
