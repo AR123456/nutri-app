@@ -38,4 +38,15 @@ const ReminderToggle = () => {
 
 export default ReminderToggle;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 30,
+  },
+  label: {
+    color: colors.text,
+    fontSize: 16,
+  },
+});
