@@ -30,8 +30,13 @@ const ReminderToggle = () => {
     await AsyncStorage.setItem(REMINDERS_KEY, value.toString());
   };
   return (
-    <View>
-      <Text>ReminderToggle</Text>
+    <View style={styles.container}>
+      <Text style={styles.label}>Meal Reminders</Text>
+      <Switch
+        value={enabled}
+        onValueChange={toggle}
+        trackColor={{ false: colors.surface, true: colors.primary }}
+      />
     </View>
   );
 };
