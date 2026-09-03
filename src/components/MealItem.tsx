@@ -1,6 +1,7 @@
 import * as Haptics from "expo-haptics";
 import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { deleteMeal } from "@/storage/meals";
+import { editMeal } from "@/storage/meals";
 import { colors } from "@/styles/global";
 
 type MealItemProps = {
