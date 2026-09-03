@@ -34,6 +34,7 @@ export const addMeal = async (
   //Returns the completed meal object so the caller can use it
   return newMeal;
 };
+// eventually called with long press
 export const deleteMeal = async (id: string): Promise<void> => {
   const meals = await getMeals();
   const filtered = meals.filter((meal) => meal.id !== id);
@@ -43,3 +44,8 @@ export const deleteMeal = async (id: string): Promise<void> => {
 export const clearAllMeals = async (): Promise<void> => {
   await AsyncStorage.removeItem(MEALS_KEY);
 };
+// TODO edit meal
+// exportablel const editMeal
+//get meals, filter by the meal id
+// present screen to edit
+// similar to add meal, put the updated meal in asyncStorage with the same id as original
