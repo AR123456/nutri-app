@@ -49,8 +49,3 @@ export const clearAllMeals = async (): Promise<void> => {
 //get meals, filter by the meal id
 // present screen to edit
 // similar to add meal, put the updated meal in asyncStorage with the same id as original
-export const editMeal = async (id: string): Promise<void> => {
-  const meals = await getMeals();
-  const filtered = meals.filter((meal) => meal.id !== id);
-  console.log(filtered);
-};
