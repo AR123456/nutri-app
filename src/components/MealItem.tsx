@@ -1,5 +1,5 @@
 import * as Haptics from "expo-haptics";
-import { Alert, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { deleteMeal } from "@/storage/meals";
 import { colors } from "@/styles/global";
 
@@ -50,6 +50,7 @@ const MealItem = ({
       <Text style={styles.macros}>
         {calories} cal • {protein}g P • {carbs}g C • {fat}g F
       </Text>
+      <Text style={styles.red}>Long press to delete meal</Text>
     </TouchableOpacity>
   );
 };
@@ -73,4 +74,5 @@ const styles = StyleSheet.create({
     color: "#a0a0b0",
     marginTop: 4,
   },
+  red: { color: "yellow" },
 });
