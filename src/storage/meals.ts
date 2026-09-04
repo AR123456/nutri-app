@@ -44,8 +44,14 @@ export const deleteMeal = async (id: string): Promise<void> => {
 export const clearAllMeals = async (): Promise<void> => {
   await AsyncStorage.removeItem(MEALS_KEY);
 };
-// TODO edit meal
+// TODO edit meal - when pencil button clicked go to Edixt meal screen which is almost identical in appearance to add-meal.tsx  screen
 // exportablel const editMeal
 //get meals, filter by the meal id
 // present screen to edit
 // similar to add meal, put the updated meal in asyncStorage with the same id as original
+// call this in
+export const editMeal = async (id: string): Promise<void> => {
+  const meals = await getMeals();
+  const filtered = meals.filter((meal) => meal.id !== id);
+  console.log(filtered);
+};

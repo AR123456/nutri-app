@@ -1,6 +1,14 @@
 import * as Haptics from "expo-haptics";
-import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Alert,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Pressable,
+} from "react-native";
 import { deleteMeal } from "@/storage/meals";
+import { editMeal } from "@/storage/meals";
 import { colors } from "@/styles/global";
 
 type MealItemProps = {
@@ -11,6 +19,10 @@ type MealItemProps = {
   carbs: number;
   fat: number;
   onDelete: () => void;
+  onEdit: () => void;
+};
+const handleEdit = () => {
+  alert("called handle edit");
 };
 // take meal name and its macros , display it
 const MealItem = ({
@@ -50,7 +62,10 @@ const MealItem = ({
       <Text style={styles.macros}>
         {calories} cal • {protein}g P • {carbs}g C • {fat}g F
       </Text>
-      <Text style={styles.red}>Long press to delete meal</Text>
+      <Pressable onPress={handleEdit}>
+        {" "}
+        <Text style={styles.red}>Long press to delete meal</Text>
+      </Pressable>
     </TouchableOpacity>
   );
 };
