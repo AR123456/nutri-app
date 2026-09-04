@@ -23,8 +23,6 @@ type MealItemProps = {
 };
 const handleEdit = () => {
   alert("called handle edit");
-  // present the edit screen
-  // take the updates from that screen and get them to editMeal in meals.ts
 };
 // take meal name and its macros , display it
 const MealItem = ({
@@ -66,7 +64,7 @@ const MealItem = ({
       </Text>
       <Pressable onPress={handleEdit}>
         {" "}
-        <Text style={styles.red}>Edit meal here</Text>
+        <Text style={styles.red}>Long press to delete meal</Text>
       </Pressable>
     </TouchableOpacity>
   );
