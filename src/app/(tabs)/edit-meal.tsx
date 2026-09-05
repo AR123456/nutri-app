@@ -1,5 +1,6 @@
 import { useState } from "react";
 import * as Haptics from "expo-haptics";
+// import { Ionicons } from "@expo/vector-icons";
 // need router and the meals handler
 import { editMeal, getMeals } from "@/storage/meals";
 import { router } from "expo-router";
@@ -13,7 +14,7 @@ import {
 } from "react-native";
 import { colors, globalStyles } from "@/styles/global";
 
-export default function AddMealScreen() {
+export default function EditMealScreen() {
   const [name, setName] = useState("");
   const [calories, setCalories] = useState("");
   const [protein, setProtein] = useState("");
@@ -26,7 +27,7 @@ export default function AddMealScreen() {
       return;
     }
 
-    await addMeal({
+    await editMeal({
       name,
       // get user input cast as number
       calories: Number(calories),
@@ -49,14 +50,14 @@ export default function AddMealScreen() {
     //   await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     // };
     // triggerHaptic();
-    Alert.alert("Success", "Meal added successfully!");
+    Alert.alert("Success", "Edited added successfully!");
     // redirect to home
     router.push("/");
   };
 
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.title}>Add Meal</Text>
+      <Text style={globalStyles.title}>Edit Meal</Text>
 
       <TextInput
         style={styles.input}
