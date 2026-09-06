@@ -8,7 +8,7 @@ import {
   Pressable,
 } from "react-native";
 import { deleteMeal } from "@/storage/meals";
-import { editMeal } from "@/storage/meals";
+
 import { colors } from "@/styles/global";
 
 type MealItemProps = {
