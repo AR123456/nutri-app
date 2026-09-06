@@ -3,6 +3,7 @@ import * as Haptics from "expo-haptics";
 // import { Ionicons } from "@expo/vector-icons";
 // need router and the meals handler
 import { editMeal, getMeals } from "@/storage/meals";
+import { useLocalSearchParams } from "expo-router";
 import { router } from "expo-router";
 import {
   Alert,
@@ -15,6 +16,7 @@ import {
 import { colors, globalStyles } from "@/styles/global";
 
 export default function EditMealScreen() {
+  const { id } = useLocalSearchParams<{ id: string }>();
   const [name, setName] = useState("");
   const [calories, setCalories] = useState("");
   const [protein, setProtein] = useState("");
