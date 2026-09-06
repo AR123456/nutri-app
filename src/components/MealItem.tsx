@@ -1,4 +1,3 @@
-import { router } from "expo-router";
 import * as Haptics from "expo-haptics";
 import {
   Alert,
@@ -9,7 +8,7 @@ import {
   Pressable,
 } from "react-native";
 import { deleteMeal } from "@/storage/meals";
-
+import { editMeal } from "@/storage/meals";
 import { colors } from "@/styles/global";
 
 type MealItemProps = {
@@ -22,7 +21,11 @@ type MealItemProps = {
   onDelete: () => void;
   onEdit: () => void;
 };
-
+const handleEdit = () => {
+  alert("called handle edit");
+  // present the edit screen
+  // take the updates from that screen and get them to editMeal in meals.ts
+};
 // take meal name and its macros , display it
 const MealItem = ({
   id,
@@ -54,11 +57,7 @@ const MealItem = ({
       },
     ]);
   };
-  const handleEdit = () => {
-    alert("called handle edit");
-    // present the edit screen
-    // take the updates from that screen and get them to editMeal in meals.ts
-  };
+
   return (
     <TouchableOpacity style={styles.container} onLongPress={handleLongPress}>
       <Text style={styles.name}>{name}</Text>
