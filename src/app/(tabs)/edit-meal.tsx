@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as Haptics from "expo-haptics";
 // import { Ionicons } from "@expo/vector-icons";
 // need router and the meals handler
@@ -22,6 +22,10 @@ export default function EditMealScreen() {
   const [protein, setProtein] = useState("");
   const [carbs, setCarbs] = useState("");
   const [fat, setFat] = useState("");
+  // get stored values
+  useEffect(() => {
+    // use id to get that ids stored values
+  }, [id]);
 
   const handleEditMeal = async () => {
     if (!name || !calories) {
