@@ -29,7 +29,7 @@ export default function EditMealScreen() {
       return;
     }
 
-    await editMeal({
+    await editMeal(id, {
       name,
       // get user input cast as number
       calories: Number(calories),
