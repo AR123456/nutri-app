@@ -55,7 +55,6 @@ const MealItem = ({
     ]);
   };
   const handleEdit = () => {
-    console.log("navigating to edit", id);
     router.push({ pathname: "/edit-meal", params: { id } });
     // present the edit screen
     // take the updates from that screen and get them to editMeal in meals.ts
