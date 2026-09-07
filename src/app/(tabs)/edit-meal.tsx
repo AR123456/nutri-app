@@ -37,9 +37,7 @@ export default function EditMealScreen() {
       carbs: Number(carbs) || 0,
       fat: Number(fat) || 0,
     });
-    // cons log for test
-    // const stored = await getMeals();
-    // console.log("Storage after add:", stored);
+
     // clear from state after adding to storage
     setName("");
     setCalories("");
@@ -63,7 +61,7 @@ export default function EditMealScreen() {
 
       <TextInput
         style={styles.input}
-        placeholder="Meal name"
+        placeholder={meal.name}
         placeholderTextColor={colors.textSecondary}
         value={name}
         onChangeText={setName}
