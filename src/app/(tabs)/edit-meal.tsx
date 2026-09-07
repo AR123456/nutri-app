@@ -61,7 +61,7 @@ export default function EditMealScreen() {
 
       <TextInput
         style={styles.input}
-        placeholder={meal.name}
+        placeholder={name}
         placeholderTextColor={colors.textSecondary}
         value={name}
         onChangeText={setName}
