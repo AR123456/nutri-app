@@ -59,4 +59,5 @@ export const editMeal = async (
     meal.id === id ? { ...meal, ...updates } : meal,
   );
   console.log("Updated meals:", updatedMeals);
+  await AsyncStorage.setItem(MEALS_KEY, JSON.stringify(updatedMeals));
 };
