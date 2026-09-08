@@ -33,7 +33,8 @@ export default function HomeScreen() {
       <HomeHeader />
       <MacroGrid meals={meals} />
       <CopyButton meals={meals} />
-      {/* {Platform.OS !== "android" && <ReminderToggle />} */}
+      {/* TODO reminder toggle not supported expo go */}
+      <ReminderToggle />
       <RecentMeals meals={meals} onDelete={loadMeals} />
     </ScrollView>
   );

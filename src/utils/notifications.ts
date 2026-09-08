@@ -16,7 +16,7 @@ export const requestPermissions = async (): Promise<boolean> => {
 
   return status === "granted";
 };
-// schedule mel reminders
+// schedule meal reminders
 export const scheduleMealReminders = async () => {
   await Notifications.cancelAllScheduledNotificationsAsync();
 
@@ -27,7 +27,7 @@ export const scheduleMealReminders = async () => {
     },
     trigger: {
       type: Notifications.SchedulableTriggerInputTypes.DAILY,
-      hour: 10,
+      hour: 12,
       minute: 10,
     },
   });
