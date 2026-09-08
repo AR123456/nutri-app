@@ -58,6 +58,6 @@ export const editMeal = async (
   const updatedMeals = meals.map((meal) =>
     meal.id === id ? { ...meal, ...updates } : meal,
   );
-  console.log("Updated meals:", updatedMeals);
+
   await AsyncStorage.setItem(MEALS_KEY, JSON.stringify(updatedMeals));
 };

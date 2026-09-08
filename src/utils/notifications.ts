@@ -27,8 +27,8 @@ export const scheduleMealReminders = async () => {
     },
     trigger: {
       type: Notifications.SchedulableTriggerInputTypes.DAILY,
-      hour: 12,
-      minute: 0,
+      hour: 10,
+      minute: 10,
     },
   });
 
