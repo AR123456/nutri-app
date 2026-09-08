@@ -25,6 +25,21 @@ export default function EditMealScreen() {
   // get stored values
   useEffect(() => {
     // use id to get that ids stored values
+    const loadMeal = async () => {
+      const meals = await getMeals();
+      const meal = meals.find((m) => m.id === id);
+      if (!meal) {
+        Alert.alert("error", "meal not found");
+        router.push("/");
+        return;
+      }
+      setName(meal.name);
+      setCalories(String(meal.calories));
+      setProtein(String(meal.protein));
+      setCarbs(String(meal.carbs));
+      setFat(String(meal.fat));
+    };
+    loadMeal();
   }, [id]);
 
   const handleEditMeal = async () => {
