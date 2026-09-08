@@ -66,7 +66,6 @@ const MealItem = ({
         {calories} cal • {protein}g P • {carbs}g C • {fat}g F
       </Text>
       <Pressable onPress={handleEdit}>
-        {" "}
         <Text style={styles.red}>Edit meal here</Text>
       </Pressable>
     </TouchableOpacity>

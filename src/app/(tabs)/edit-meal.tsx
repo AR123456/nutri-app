@@ -125,7 +125,6 @@ export default function EditMealScreen() {
       </View>
       <TouchableOpacity style={styles.button} onPress={handleEditMeal}>
         <Text style={styles.buttonText}>Save Updates Meal</Text>
-        <Text>Meal id is {id}</Text>
       </TouchableOpacity>
     </View>
   );
