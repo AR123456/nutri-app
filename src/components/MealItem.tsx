@@ -20,7 +20,6 @@ type MealItemProps = {
   carbs: number;
   fat: number;
   onDelete: () => void;
-  onEdit: () => void;
 };
 
 // take meal name and its macros , display it
